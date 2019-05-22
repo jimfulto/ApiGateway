@@ -24,8 +24,10 @@
 
 # In Api Gateway service /Application.properties - add in new microservices here:
 
+   When a service calls API gatway service with /employee/** endpoint, then it will get redirect or route to https://employeebackendservice.cfapps.io/employees/all url endpoint.
+   
     zuul.routes.employee.path=/employee/**
-    zuul.routes.employee.url=http://localhost:8081/employee
+    zuul.routes.employee.url=https://employeebackendservice.cfapps.io/employees/all
 
 
 # In actual Employee web service, on top of the controller add below to accept any host to access the operation.
